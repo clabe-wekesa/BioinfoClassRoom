@@ -159,19 +159,7 @@ Verify Git:
 git --version
 ```
 
-## 5. Understand the Linux and Windows filesystems
-
-Your Ubuntu home directory is represented by:
-
-```bash
-~
-```
-
-Display it using:
-
-```bash
-pwd
-```
+## 5. Open Ubuntu directly in any course folder
 
 Windows drives are available under `/mnt`. For example:
 
@@ -185,20 +173,78 @@ is accessible from Ubuntu as:
 /mnt/c/Users/Student/Documents
 ```
 
-For programming and bioinformatics analyses, keep active projects in the Linux home directory, for example:
+For the introductory practicals, students can create an easily accessible Windows folder such as:
 
-```bash
-mkdir -p ~/courses
-cd ~/courses
+```text
+C:\SBI-courses
 ```
 
-Working inside `~/courses` normally provides better performance and fewer file-permission problems than running analyses directly under `/mnt/c/`.
+### 5.1 Set Ubuntu as the default Windows Terminal profile
+
+This setup is required only once:
+
+1. Open **Windows Terminal**.
+2. Select the arrow beside the **+** button.
+3. Select **Settings**.
+4. Under **Startup**, set **Default profile** to **Ubuntu-24.04**.
+5. Select **Save**.
+
+Windows Terminal automatically creates an Ubuntu profile after WSL Ubuntu is installed.
+
+### 5.2 Open Linux in a selected folder
+
+1. Open File Explorer.
+2. Navigate to the desired folder, for example `C:\SBI-courses`.
+3. Right-click an empty area inside the folder. On some Windows versions, hold **Shift** while right-clicking.
+4. Select **Open in Terminal** or **Open Linux shell here**, depending on the Windows version.
+
+Because Ubuntu is the default terminal profile, the terminal should open as an Ubuntu shell in that folder.
+
+If **Open in Terminal** opens PowerShell instead, enter:
+
+```powershell
+wsl
+```
+
+WSL will enter Linux while retaining the same working folder.
+
+Verify the location using:
+
+```bash
+pwd
+```
+
+For `C:\SBI-courses`, Ubuntu should show:
+
+```text
+/mnt/c/SBI-courses
+```
+
+### 5.3 Alternative method using the File Explorer address bar
+
+Navigate to a folder in File Explorer, click the address bar, enter:
+
+```text
+wsl
+```
+
+and press **Enter**. This opens an Ubuntu shell in the selected folder.
+
+### 5.4 Access Linux files from Windows
+
+Ubuntu's Linux home directory is represented by:
+
+```bash
+~
+```
 
 Windows File Explorer can display the current Ubuntu directory using:
 
 ```bash
 explorer.exe .
 ```
+
+For early Bash and Python exercises, working in `C:\SBI-courses` is convenient. For large RNA-seq files and compute-intensive BOTAS analyses, the instructor may later ask students to work under `~/courses`, because Linux tools normally perform better in the WSL filesystem than under `/mnt/c/`.
 
 ## 6. Check the computer architecture
 
@@ -280,25 +326,15 @@ python --version
 conda list
 ```
 
-## 8. Create the course environment
+### 7.6 Keep the base environment active
 
-Create a dedicated environment rather than installing course packages in the base environment:
-
-```bash
-conda create -n sbi-courses python=3.12 -y
-```
-
-Activate it:
-
-```bash
-conda activate sbi-courses
-```
-
-The prompt should begin with:
+The installer initializes conda so that its base environment activates whenever Ubuntu starts. The command prompt should begin with:
 
 ```text
-(sbi-courses)
+(base)
 ```
+
+For these courses, students will use this shared base environment unless the instructor gives different instructions. Packages installed during the course will therefore be available in later practical sessions.
 
 Verify the active Python installation:
 
@@ -307,24 +343,25 @@ which python
 python --version
 ```
 
-The path printed by `which python` should contain:
+The path printed by `which python` should normally contain:
 
 ```text
-anaconda3/envs/sbi-courses
+anaconda3/bin/python
 ```
 
-Deactivate the environment when finished:
+Install packages without `sudo`, for example:
 
 ```bash
-conda deactivate
+conda install PACKAGE_NAME
 ```
 
-## 9. Test the installation
+Do not use `sudo pip install` or `sudo conda install`. Those commands can mix system-level and Anaconda-managed packages and create permission problems.
 
-Open Ubuntu and run:
+## 8. Test the installation
+
+Open Linux in the course folder using **Open in Terminal** or **Open Linux shell here**, confirm that `(base)` appears, and run:
 
 ```bash
-conda activate sbi-courses
 python
 ```
 
@@ -348,21 +385,17 @@ Exit Python:
 exit()
 ```
 
-## 10. Starting Ubuntu in future sessions
+## 9. Starting a practical session in the required folder
 
-Students can start Ubuntu in any of these ways:
+1. Open the course folder in File Explorer.
+2. Right-click an empty area, using **Shift + right-click** where necessary.
+3. Select **Open in Terminal** or **Open Linux shell here**.
+4. Confirm that the prompt begins with `(base)`.
+5. Run `pwd` to confirm that the terminal opened in the correct folder.
 
-- Open **Ubuntu 24.04 LTS** from the Start menu.
-- Open Windows Terminal and select the Ubuntu profile.
-- Open PowerShell and run `wsl`.
+There is no need to open Ubuntu from the Start menu or manually activate the base environment.
 
-At the beginning of a practical session, activate the course environment:
-
-```bash
-conda activate sbi-courses
-```
-
-## 11. Common problems
+## 10. Common problems
 
 ### `wsl` is not recognized
 
@@ -397,6 +430,21 @@ Then check:
 conda --version
 ```
 
+### `(base)` does not appear automatically
+
+Run:
+
+```bash
+~/anaconda3/bin/conda init bash
+source ~/.bashrc
+```
+
+Close the terminal and open it again in the course folder.
+
+### **Open in Terminal** starts PowerShell
+
+Either enter `wsl` to switch to Ubuntu in the same folder, or set **Ubuntu-24.04** as the default profile under **Windows Terminal → Settings → Startup**.
+
 ### The Linux password appears not to work
 
 No characters are displayed while entering a password in Ubuntu. Type it carefully and press **Enter**.
@@ -405,7 +453,7 @@ No characters are displayed while entering a password in Ubuntu. Type it careful
 
 Anaconda and future bioinformatics environments require several gigabytes of storage. Remove unnecessary files or use Miniconda after consulting the course instructor.
 
-## 12. Installation checklist
+## 11. Installation checklist
 
 Run the following commands and confirm that none produces an error:
 
@@ -421,7 +469,6 @@ In Ubuntu:
 lsb_release -a
 git --version
 conda --version
-conda activate sbi-courses
 python --version
 which python
 ```
@@ -432,8 +479,9 @@ The setup is complete when:
 - Ubuntu runs under WSL version 2;
 - Git is available;
 - conda is available inside Ubuntu;
-- the `sbi-courses` environment activates successfully; and
-- Python runs from the `sbi-courses` environment.
+- the `(base)` environment activates automatically;
+- Python runs from the Anaconda base environment; and
+- Ubuntu can be opened directly inside a selected course folder.
 
 ## Official references
 
@@ -441,4 +489,3 @@ The setup is complete when:
 - [Basic WSL commands — Microsoft](https://learn.microsoft.com/windows/wsl/basic-commands)
 - [Install Anaconda on Linux — Anaconda](https://www.anaconda.com/docs/getting-started/anaconda/install/linux-install)
 - [Anaconda installer archive](https://repo.anaconda.com/archive/)
-
