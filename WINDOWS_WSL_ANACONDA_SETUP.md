@@ -280,22 +280,6 @@ python --version
 conda list
 ```
 
-### 7.6 Prevent automatic activation of the base environment
-
-For this course, it is clearer to activate named environments explicitly. Run:
-
-```bash
-conda config --set auto_activate_base false
-```
-
-Close and reopen Ubuntu. The `(base)` label should no longer appear automatically.
-
-Conda remains available:
-
-```bash
-conda --version
-```
-
 ## 8. Create the course environment
 
 Create a dedicated environment rather than installing course packages in the base environment:
