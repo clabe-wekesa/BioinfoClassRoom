@@ -1,0 +1,28 @@
+##gff-version 3
+##sequence-region chr1 1 9000
+chr1	TeachingRef	gene	100	489	.	+	.	ID=geneA;Name=geneA;product=hypothetical_protein
+chr1	TeachingRef	CDS	100	489	.	+	0	ID=cds_geneA;Parent=geneA;product=hypothetical_protein
+chr1	TeachingRef	gene	650	1121	.	-	.	ID=geneB;Name=geneB;product=ABC_transporter_protein
+chr1	TeachingRef	CDS	650	1121	.	-	0	ID=cds_geneB;Parent=geneB;product=ABC_transporter_protein
+chr1	TeachingRef	gene	1300	1648	.	+	.	ID=geneC;Name=geneC;product=hypothetical_protein
+chr1	TeachingRef	CDS	1300	1648	.	+	0	ID=cds_geneC;Parent=geneC;product=hypothetical_protein
+chr1	TeachingRef	gene	1800	2285	.	+	.	ID=geneD;Name=geneD;product=transcriptional_regulator
+chr1	TeachingRef	CDS	1800	2285	.	+	0	ID=cds_geneD;Parent=geneD;product=transcriptional_regulator
+chr1	TeachingRef	gene	2500	2960	.	-	.	ID=geneE;Name=geneE;product=membrane_transporter_protein
+chr1	TeachingRef	CDS	2500	2960	.	-	0	ID=cds_geneE;Parent=geneE;product=membrane_transporter_protein
+chr1	TeachingRef	gene	3200	3520	.	+	.	ID=geneF;Name=geneF;product=ribosomal_protein
+chr1	TeachingRef	CDS	3200	3520	.	+	0	ID=cds_geneF;Parent=geneF;product=ribosomal_protein
+chr1	TeachingRef	gene	3800	4310	.	-	.	ID=geneG;Name=geneG;product=oxidoreductase
+chr1	TeachingRef	CDS	3800	4310	.	-	0	ID=cds_geneG;Parent=geneG;product=oxidoreductase
+chr1	TeachingRef	gene	4550	4860	.	+	.	ID=geneH;Name=geneH;product=hypothetical_protein
+chr1	TeachingRef	CDS	4550	4860	.	+	0	ID=cds_geneH;Parent=geneH;product=hypothetical_protein
+chr1	TeachingRef	gene	5200	5715	.	-	.	ID=geneI;Name=geneI;product=DNA_binding_protein
+chr1	TeachingRef	CDS	5200	5715	.	-	0	ID=cds_geneI;Parent=geneI;product=DNA_binding_protein
+chr1	TeachingRef	gene	6000	6428	.	+	.	ID=geneJ;Name=geneJ;product=transporter_protein
+chr1	TeachingRef	CDS	6000	6428	.	+	0	ID=cds_geneJ;Parent=geneJ;product=transporter_protein
+chr1	TeachingRef	gene	6800	7285	.	+	.	ID=geneK;Name=geneK;product=metabolic_enzyme
+chr1	TeachingRef	CDS	6800	7285	.	+	0	ID=cds_geneK;Parent=geneK;product=metabolic_enzyme
+chr1	TeachingRef	gene	7600	7920	.	-	.	ID=geneL;Name=geneL;product=hypothetical_protein
+chr1	TeachingRef	CDS	7600	7920	.	-	0	ID=cds_geneL;Parent=geneL;product=hypothetical_protein
+chr1	TeachingRef	tRNA	8100	8175	.	+	.	ID=tRNA1;product=tRNA-Leu
+chr1	TeachingRef	rRNA	8300	8448	.	-	.	ID=rRNA1;product=5S_rRNA
