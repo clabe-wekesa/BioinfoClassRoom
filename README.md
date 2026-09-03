@@ -96,8 +96,8 @@ Large sequencing files, alignment files, software environments and confidential 
 Clone the repository using:
 
 ```bash
-git clone https://github.com/USERNAME/sbi811-812-computational-bioinformatics.git
-cd sbi811-812-computational-bioinformatics
+git clone https://github.com/clabe-wekesa/BioinfoClassRoom.git
+cd BioinfoClassRoom
 ```
 
 Replace `USERNAME` with the repository owner's GitHub username. Course-specific instructions will be provided inside the relevant directories.
