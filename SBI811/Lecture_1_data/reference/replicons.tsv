@@ -1,0 +1,4 @@
+replicon_id	replicon_type	length_bp	description
+chr1	chromosome	12000	synthetic_primary_chromosome
+chr2	chromosome	9000	synthetic_secondary_chromosome
+plasmidA	plasmid	5000	synthetic_plasmid

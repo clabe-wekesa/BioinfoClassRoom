@@ -1,0 +1,49 @@
+##gff-version 3
+##sequence-region chr1 1 12000
+##sequence-region chr2 1 9000
+##sequence-region plasmidA 1 5000
+chr1	TeachingRef	gene	300	602	.	+	.	ID=chr1_gene01;Name=chr1_gene01;product=hypothetical_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	300	602	.	+	0	ID=cds_chr1_gene01;Parent=chr1_gene01;product=hypothetical_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	900	1259	.	-	.	ID=chr1_gene02;Name=chr1_gene02;product=ABC_transporter_ATP_binding_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	900	1259	.	-	0	ID=cds_chr1_gene02;Parent=chr1_gene02;product=ABC_transporter_ATP_binding_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	1600	2019	.	+	.	ID=chr1_gene03;Name=chr1_gene03;product=transcriptional_regulator;replicon_type=chromosome
+chr1	TeachingRef	CDS	1600	2019	.	+	0	ID=cds_chr1_gene03;Parent=chr1_gene03;product=transcriptional_regulator;replicon_type=chromosome
+chr1	TeachingRef	gene	2400	2855	.	-	.	ID=chr1_gene04;Name=chr1_gene04;product=DNA_gyrase_associated_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	2400	2855	.	-	0	ID=cds_chr1_gene04;Parent=chr1_gene04;product=DNA_gyrase_associated_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	3300	3809	.	+	.	ID=chr1_gene05;Name=chr1_gene05;product=membrane_transporter_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	3300	3809	.	+	0	ID=cds_chr1_gene05;Parent=chr1_gene05;product=membrane_transporter_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	4300	4632	.	+	.	ID=chr1_gene06;Name=chr1_gene06;product=ribosomal_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	4300	4632	.	+	0	ID=cds_chr1_gene06;Parent=chr1_gene06;product=ribosomal_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	5200	5589	.	-	.	ID=chr1_gene07;Name=chr1_gene07;product=oxidoreductase;replicon_type=chromosome
+chr1	TeachingRef	CDS	5200	5589	.	-	0	ID=cds_chr1_gene07;Parent=chr1_gene07;product=oxidoreductase;replicon_type=chromosome
+chr1	TeachingRef	gene	6500	6946	.	+	.	ID=chr1_gene08;Name=chr1_gene08;product=hypothetical_protein;replicon_type=chromosome
+chr1	TeachingRef	CDS	6500	6946	.	+	0	ID=cds_chr1_gene08;Parent=chr1_gene08;product=hypothetical_protein;replicon_type=chromosome
+chr1	TeachingRef	gene	7600	8019	.	-	.	ID=chr1_gene09;Name=chr1_gene09;product=ATP_dependent_helicase;replicon_type=chromosome
+chr1	TeachingRef	CDS	7600	8019	.	-	0	ID=cds_chr1_gene09;Parent=chr1_gene09;product=ATP_dependent_helicase;replicon_type=chromosome
+chr1	TeachingRef	rRNA	8650	8798	.	+	.	ID=chr1_rRNA01;product=5S_rRNA;replicon_type=chromosome
+chr1	TeachingRef	tRNA	9100	9175	.	-	.	ID=chr1_tRNA01;product=tRNA_Leu;replicon_type=chromosome
+chr2	TeachingRef	gene	300	659	.	+	.	ID=chr2_gene01;Name=chr2_gene01;product=two_component_sensor_kinase;replicon_type=chromosome
+chr2	TeachingRef	CDS	300	659	.	+	0	ID=cds_chr2_gene01;Parent=chr2_gene01;product=two_component_sensor_kinase;replicon_type=chromosome
+chr2	TeachingRef	gene	1000	1419	.	-	.	ID=chr2_gene02;Name=chr2_gene02;product=sugar_transporter_protein;replicon_type=chromosome
+chr2	TeachingRef	CDS	1000	1419	.	-	0	ID=cds_chr2_gene02;Parent=chr2_gene02;product=sugar_transporter_protein;replicon_type=chromosome
+chr2	TeachingRef	gene	1800	2129	.	+	.	ID=chr2_gene03;Name=chr2_gene03;product=hypothetical_protein;replicon_type=chromosome
+chr2	TeachingRef	CDS	1800	2129	.	+	0	ID=cds_chr2_gene03;Parent=chr2_gene03;product=hypothetical_protein;replicon_type=chromosome
+chr2	TeachingRef	gene	2600	3049	.	+	.	ID=chr2_gene04;Name=chr2_gene04;product=metabolic_enzyme;replicon_type=chromosome
+chr2	TeachingRef	CDS	2600	3049	.	+	0	ID=cds_chr2_gene04;Parent=chr2_gene04;product=metabolic_enzyme;replicon_type=chromosome
+chr2	TeachingRef	gene	3600	3989	.	-	.	ID=chr2_gene05;Name=chr2_gene05;product=DNA_binding_protein;replicon_type=chromosome
+chr2	TeachingRef	CDS	3600	3989	.	-	0	ID=cds_chr2_gene05;Parent=chr2_gene05;product=DNA_binding_protein;replicon_type=chromosome
+chr2	TeachingRef	gene	4700	5119	.	+	.	ID=chr2_gene06;Name=chr2_gene06;product=amino_acid_transporter;replicon_type=chromosome
+chr2	TeachingRef	CDS	4700	5119	.	+	0	ID=cds_chr2_gene06;Parent=chr2_gene06;product=amino_acid_transporter;replicon_type=chromosome
+chr2	TeachingRef	gene	6200	6559	.	-	.	ID=chr2_gene07;Name=chr2_gene07;product=hypothetical_protein;replicon_type=chromosome
+chr2	TeachingRef	CDS	6200	6559	.	-	0	ID=cds_chr2_gene07;Parent=chr2_gene07;product=hypothetical_protein;replicon_type=chromosome
+chr2	TeachingRef	tRNA	7200	7275	.	+	.	ID=chr2_tRNA01;product=tRNA_Gly;replicon_type=chromosome
+chr2	TeachingRef	rRNA	7800	7948	.	-	.	ID=chr2_rRNA01;product=5S_rRNA;replicon_type=chromosome
+plasmidA	TeachingRef	gene	300	659	.	+	.	ID=plasmid_gene01;Name=plasmid_gene01;product=plasmid_replication_protein;replicon_type=plasmid
+plasmidA	TeachingRef	CDS	300	659	.	+	0	ID=cds_plasmid_gene01;Parent=plasmid_gene01;product=plasmid_replication_protein;replicon_type=plasmid
+plasmidA	TeachingRef	gene	1100	1459	.	-	.	ID=plasmid_gene02;Name=plasmid_gene02;product=mobilization_protein;replicon_type=plasmid
+plasmidA	TeachingRef	CDS	1100	1459	.	-	0	ID=cds_plasmid_gene02;Parent=plasmid_gene02;product=mobilization_protein;replicon_type=plasmid
+plasmidA	TeachingRef	gene	2200	2592	.	-	.	ID=plasmid_gene03;Name=plasmid_gene03;product=toxin_antitoxin_system_protein;replicon_type=plasmid
+plasmidA	TeachingRef	CDS	2200	2592	.	-	0	ID=cds_plasmid_gene03;Parent=plasmid_gene03;product=toxin_antitoxin_system_protein;replicon_type=plasmid
+plasmidA	TeachingRef	gene	3300	3659	.	+	.	ID=plasmid_gene04;Name=plasmid_gene04;product=hypothetical_protein;replicon_type=plasmid
+plasmidA	TeachingRef	CDS	3300	3659	.	+	0	ID=cds_plasmid_gene04;Parent=plasmid_gene04;product=hypothetical_protein;replicon_type=plasmid
+plasmidA	TeachingRef	ncRNA	4100	4210	.	+	.	ID=plasmid_ncRNA01;product=small_regulatory_RNA;replicon_type=plasmid
