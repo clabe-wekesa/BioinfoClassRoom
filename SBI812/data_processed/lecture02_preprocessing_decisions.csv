@@ -1,0 +1,7 @@
+issue,decision,reason
+Inconsistent treatment capitalization,Strip spaces and convert to lowercase,The labels have the same documented meaning
+gene_a stored as object,Keep the original and convert invalid text to missing,The failed conversion remains visible
+Missing gene measurements,Create median-imputed columns and missing indicators,Rows are preserved for this preprocessing example
+Duplicated sample ID,Flag it and request clarification,It may be an error or two distinct samples
+Extreme gene_b value,Retain the original value and flag it,There is no laboratory evidence that it is wrong
+Negative growth rate,Flag it and verify the definition and source,Values should not be silently corrected or removed
