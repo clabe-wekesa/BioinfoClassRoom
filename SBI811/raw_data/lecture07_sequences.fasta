@@ -1,0 +1,13 @@
+>seq01 example bacterial enzyme
+ATGCGTACGTTAGCTAGCTAGGCTAACCGGTTAA
+>seq02 example regulatory sequence
+TTGACATGCGCGATATATCGCGGATCCGATTA
+>seq03 sequence containing lowercase letters
+atggccattgtaatgggccgctgaaagggtgcccgatag
+>seq04 sequence split across several lines
+ATGAAACCCGGGTTT
+AAACCCGGGTTTAAA
+
+CCCGGGTTTAAATAG
+>seq05 sequence with an ambiguous nucleotide
+ATGCGTNNNACGTACGTAG
